@@ -1,0 +1,148 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "title": "User schema",
+    "description": "Information required when creating new user",
+    "default": {},
+    "examples": [
+        {
+            "username": "vvaananen",
+            "name": "Veera Vaananen",
+            "birthDate": "1998-24-10",
+            "address": {
+                "streetAddress": "Sammalkuja 8",
+                "postalCode": 90500,
+                "city": "Oulu",
+                "country": "FI"
+            },
+            "email": "example@oamk.fi",
+            "password": "p433w0rd"
+        }
+    ],
+    "required": [
+        "username",
+        "name",
+        "birthDate",
+        "address",
+        "email",
+        "password"
+    ],
+    "properties": {
+        "username": {
+            "$id": "#/properties/username",
+            "type": "string",
+            "title": "The username schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "vvaananen"
+            ]
+        },
+        "name": {
+            "$id": "#/properties/name",
+            "type": "string",
+            "title": "The name schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "Veera Vaananen"
+            ]
+        },
+        "birthDate": {
+            "$id": "#/properties/birthDate",
+            "type": "string",
+            "title": "The birthDate schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "1998-24-10"
+            ]
+        },
+        "address": {
+            "$id": "#/properties/address",
+            "type": "object",
+            "title": "The address schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "examples": [
+                {
+                    "streetAddress": "Sammalkuja 8",
+                    "postalCode": 90500,
+                    "city": "Oulu",
+                    "country": "FI"
+                }
+            ],
+            "required": [
+                "streetAddress",
+                "postalCode",
+                "city",
+                "country"
+            ],
+            "properties": {
+                "streetAddress": {
+                    "$id": "#/properties/address/properties/streetAddress",
+                    "type": "string",
+                    "title": "The streetAddress schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "Sammalkuja 8"
+                    ]
+                },
+                "postalCode": {
+                    "$id": "#/properties/address/properties/postalCode",
+                    "type": "integer",
+                    "title": "The postalCode schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [
+                        90500
+                    ]
+                },
+                "city": {
+                    "$id": "#/properties/address/properties/city",
+                    "type": "string",
+                    "title": "The city schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "Oulu"
+                    ]
+                },
+                "country": {
+                    "$id": "#/properties/address/properties/country",
+                    "type": "string",
+                    "title": "The country schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "FI"
+                    ]
+                }
+            },
+            "additionalProperties": true
+        },
+        "email": {
+            "$id": "#/properties/email",
+            "type": "string",
+            "title": "The email schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "example@oamk.fi"
+            ]
+        },
+        "password": {
+            "$id": "#/properties/password",
+            "type": "string",
+            "title": "The password schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "p433w0rd"
+            ]
+        }
+    },
+    "additionalProperties": true
+}
